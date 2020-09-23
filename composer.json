@@ -1,0 +1,19 @@
+{
+    "name": "miguel456/raspberry-bot",
+    "description": "The Raspberry Bot integrates with the Raspberry Staff Manager to give you full control of the web app from your Discord server, and to notify you as events go on and perform the necessary changes as someone is promoted. It also functions as a moderation bot and custom commands bot!",
+    "type": "project",
+    "require": {
+        "team-reflex/discord-php": "^5.0",
+        "vlucas/phpdotenv": "^5.2"
+    },
+    "require-dev": {
+        "monolog/monolog": "^2.1"
+    },
+    "license": "Proprietary",
+    "authors": [
+        {
+            "name": "Miguel Nogueira",
+            "email": "miguel456@spacejewel-hosting.com"
+        }
+    ]
+}
