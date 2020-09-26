@@ -1,6 +1,8 @@
 <?php
 
 use nogueiracodes\RaspberryBot\Bot\Actions\MessageLogger;
+use nogueiracodes\RaspberryBot\Bot\Commands\MinecraftInfo;
+use nogueiracodes\RaspberryBot\Bot\Commands\NumberFact;
 use nogueiracodes\RaspberryBot\Bot\Commands\SimplePlayback;
 use nogueiracodes\RaspberryBot\Core\RaspberryBot;
 
@@ -13,7 +15,11 @@ echo 'This console will now display logging output from actions and commands sen
 
 $raspberryBot
     ->initialize()
-    ->addCommand(new SimplePlayback)
+    ->addCommand([
+        new SimplePlayback,
+        new NumberFact,
+        new MinecraftInfo
+    ])
     ->addAction(new MessageLogger)
     ->setCommandPrefix($_ENV['COMMAND_PREFIX'])
     ->run();

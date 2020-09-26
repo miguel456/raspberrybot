@@ -84,9 +84,21 @@ class RaspberryBot
      * @param Command $command
      * @return RaspberryBot
      */
-    public function addCommand(Command $command): RaspberryBot
+    public function addCommand(array $command): RaspberryBot
     {
-        array_push($this->commands, $command);
+        foreach ($command as $singleCommand)
+        {
+            if ($singleCommand instanceof Command)
+            {
+                echo "INFO: Registering command " . $singleCommand->getCommandArguments()[0]['commandName'] . PHP_EOL;
+                array_push($this->commands, $singleCommand);
+            }
+            else
+            {
+                echo "WARNING: Checked command, but it is not valid. Discarding!" . PHP_EOL;
+            }
+        }
+
         return $this;
     }
 

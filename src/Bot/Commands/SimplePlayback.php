@@ -2,7 +2,6 @@
 
 namespace nogueiracodes\RaspberryBot\Bot\Commands;
 
-use Discord\Parts\Channel\Message;
 use nogueiracodes\RaspberryBot\Core\Interfaces\Command;
 use nogueiracodes\RaspberryBot\Traits\HasSignature;
 
