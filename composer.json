@@ -15,5 +15,10 @@
             "name": "Miguel Nogueira",
             "email": "miguel456@spacejewel-hosting.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "nogueiracodes\\RaspberryBot\\": "src/"
+        }
+    }
 }
